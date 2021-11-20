@@ -1,7 +1,10 @@
 #include <ESP8266WiFi.h>
  
-const char* ssid = "melon";
-const char* password = "deitcs3217";
+//const char* ssid = "melon";
+//const char* password = "deitcs3217";
+
+const char* ssid = "GENIUS_2G";
+const char* password = "peter8490";
  
 int ledPin = 13; // GPIO13---D7 of NodeMCU
 WiFiServer server(80);
@@ -47,7 +50,7 @@ void loop() {
     return;
   }
  
-  // Wait until the client sends some data
+  // Wait until the client sends some data to Web server
   Serial.println("new client");
   while(!client.available()){
     delay(1);
@@ -55,7 +58,7 @@ void loop() {
  
   // Read the first line of the request
   String request = client.readStringUntil('\r');
-  Serial.println(request);
+  Serial.println("request : " + request);
   client.flush();
  
   // Match the request

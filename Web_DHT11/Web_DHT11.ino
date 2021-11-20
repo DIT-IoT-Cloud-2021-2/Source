@@ -4,8 +4,8 @@
 #define DHTPIN D4     // what pin we're connected to
 #define DHTTYPE DHT11   // DHT 11
 
-const char* ssid = "GENIUS_2G"; 
-const char* password = "peter8490";
+const char* ssid = "jhkim3217"; 
+const char* password = "deitcs3217";
 DHT dht(DHTPIN, DHTTYPE);
  
 WiFiServer server(80);  // 웹서버용 포트 번호
@@ -47,19 +47,21 @@ void loop()
   } 
  
   Serial.println("new client");
+
+  // Wait until the client sends some data
   while(!client.available()){
     delay(1);
   }
  
   // 클라이언트 리퀘스트의 첫번째 줄을 읽어들임. http 요청
-  String request = client.readStringUntil('\r\n');
+  String request = client.readStringUntil('\r');
   Serial.println(request);
   client.flush();
  
   // 클라이언트 리퀘스트에 대한 응답 메시지를 시리얼통신으로 클라이언트에 전송
   client.println("HTTP/1.1 200 OK");
   client.println("Content-Type: text/html");
-  client.println();
+  client.println("");  // 필수 
   client.println("<!DOCTYPE HTML>");
   client.println("<html>");
   client.println("<meta http-equiv=\"refresh\" content=\"5\">");
@@ -70,7 +72,7 @@ void loop()
   float t = dht.readTemperature();
   float f = dht.readTemperature(true);
  
-  client.print("<h2>Weather Station</h2>");
+  client.print("<h2>DIT Weather Station</h2>");
   client.print("Temperature (C): "); 
   client.println(t);  
   client.println("<p />");  
