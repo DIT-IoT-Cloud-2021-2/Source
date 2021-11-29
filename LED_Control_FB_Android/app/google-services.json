@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "498510908904",
+    "firebase_url": "https://fir-led-test-default-rtdb.firebaseio.com",
+    "project_id": "fir-led-test",
+    "storage_bucket": "fir-led-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498510908904:android:44c3ebd874e2d6621b685d",
+        "android_client_info": {
+          "package_name": "com.example.fd_led_control"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498510908904-ogorhi8uuk6ch7f0rvhbds7m6j0ddtpk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhRC4hauej3C4kxzWdEur7fzKCbkqGVsA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498510908904-ogorhi8uuk6ch7f0rvhbds7m6j0ddtpk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

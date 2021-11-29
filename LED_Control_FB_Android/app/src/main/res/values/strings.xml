@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FD_LED_Control</string>
+    <string name="led_on">LED ON</string>
+    <string name="led_off">LED OFF</string>
+</resources>
